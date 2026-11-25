@@ -1,17 +1,37 @@
-# iris_app
+# Iris ML Project
 
-A new Flutter project.
+A machine learning model that classifies iris flowers, served through a Flask API and connected to a Flutter mobile app.
 
-## Getting Started
+## What is in this repo
+- Iris classification project.ipynb: training code for the model
+- iris_model.joblib: the trained model, saved with joblib
+- app.py: Flask API that loads the model and returns predictions
+- test_post.py: script to test the API with a sample request
+- lib/ and pubspec.yaml: the Flutter app that sends data to the API and shows the result
 
-This project is a starting point for a Flutter application.
+## How to run
+1. Run the API: install Flask, scikit-learn and joblib, then run `flask --app app run`
+2. Test it: `python test_post.py`
+3. Run the app: `flutter pub get`, then `flutter run`
 
-A few resources to get you started if this is your first Flutter project:
+## Data
+The model is trained on the Iris dataset.
+--------------------------------------------------------------------------------------------------------------------------------
+# مشروع تصنيف زهور الآيرس بالـ Machine Learning
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+موديل Machine Learning بيصنّف نوع زهرة الآيرس، متوصل بـ Flask API وبتطبيق موبايل Flutter يعرض النتيجة.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## محتويات المشروع
+- Iris classification project.ipynb: كود تدريب الموديل
+- iris_model.joblib: الموديل المدرّب ومحفوظ بـ joblib
+- app.py: الـ Flask API اللي بيحمّل الموديل ويرجّع التوقع
+- test_post.py: سكربت لتجربة الـ API بطلب تجريبي
+- lib/ وpubspec.yaml: تطبيق Flutter اللي بيبعت البيانات للـ API ويعرض النتيجة
+
+## طريقة التشغيل
+1. شغّلي الـ API: نزّلي Flask وscikit-learn وjoblib، وبعدين نفّذي `flask --app app run`
+2. جرّبيه: `python test_post.py`
+3. شغّلي التطبيق: `flutter pub get` وبعدها `flutter run`
+
+## البيانات
+الموديل متدرّب على داتا الآيرس (Iris dataset).
